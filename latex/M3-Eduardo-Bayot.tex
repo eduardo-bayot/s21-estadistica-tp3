@@ -3,6 +3,7 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{biblatex}
+\usepackage{minted}
 
 \addbibresource{M3-Eduardo-Bayot.bib} % Archivo .bib para las referencias
 
@@ -98,7 +99,51 @@ La región de rechazo será determinada según los valores críticos de \(Z\) pa
 
 \section{Desarrollo}
 \subsection{Tabla de Valores Simulados}
-Presentación de los datos generados.
+
+En esta subsección se presentan los valores generados a partir de una distribución normal con media \( \mu = 130 \) y desviación estándar \( \sigma = c \), donde los parámetros se calculan a partir del DNI del estudiante. La muestra tiene un tamaño de \( n = 5 \), que corresponde a la suma de los dos primeros dígitos no nulos del DNI (\( a = 3 \) y \( b = 2 \)). Los datos fueron generados en R con el siguiente código:
+
+\begin{minted}{R}
+# Configuración del DNI
+a <- 3
+b <- 2
+c <- 4
+
+# Tamaño de la muestra
+n <- a + b
+
+# Fijar semilla para reproducibilidad
+set.seed(123)
+
+# Generar la muestra
+muestra <- rnorm(n, mean = 130, sd = c)
+
+# Mostrar la tabla generada
+print(muestra)
+
+# Guardar como data.frame para exportar o analizar
+tabla_muestra <- data.frame(Valores = muestra)
+
+# Opcional: exportar a CSV
+write.csv(tabla_muestra, "tabla_muestra.csv", row.names = FALSE)
+\end{minted}
+
+Los valores obtenidos se presentan en la Tabla \ref{tab:valores_simulados}.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|}
+\hline
+\textbf{Valores Simulados} \\ \hline
+127.758 \\ \hline
+129.079 \\ \hline
+136.235 \\ \hline
+130.282 \\ \hline
+130.517 \\ \hline
+\end{tabular}
+\caption{Valores generados a partir de una distribución \(N(130, c)\) con \( n = 5 \) y \( c = 4 \).}
+\label{tab:valores_simulados}
+\end{table}
+
 \subsection{Planteo de Hipótesis}
 Definición formal de \( H_0 \) y \( H_a \).
 \subsection{Cálculo del Estadístico de Prueba}
