@@ -1,0 +1,80 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{biblatex}
+
+\addbibresource{M3-Eduardo-Bayot.bib} % Archivo .bib para las referencias
+
+
+\begin{document}
+
+% Carátula
+\begin{titlepage}
+    \begin{center}
+        \includegraphics[width=0.3\textwidth]{logo.png}\\[1cm] % Inserta el logo aquí, ajusta la ruta si es necesario
+        \textsc{\LARGE Universidad Siglo 21}\\[1.5cm]
+        \textsc{\Large Trabajo Práctico Nro 3}\\[0.5cm]
+        \textsc{\large Estadística y Probabilidad}\\[2cm]
+
+        \rule{\linewidth}{0.5mm} \\[0.4cm]
+        {\huge \bfseries Validación de Hipótesis Estadísticas}\\[0.4cm]
+        \rule{\linewidth}{0.5mm} \\[1.5cm]
+
+        \begin{tabular}{rl}
+            \small Profesor Titular Experto: & \small Yanina Nancy Morales \\
+            \small Profesor Titular Disciplinar: & \small Horacio José Caballero \\
+        \end{tabular}
+        \\[1.5cm]
+
+        \textbf{\small Estudiante: Eduardo Bayot}\\
+        \textbf{\small Cátedra: D}\\
+        \textbf{\small Grupo: 1}
+    \end{center}
+\end{titlepage}
+
+% Reiniciar numeración después de la carátula
+\pagenumbering{arabic}
+
+
+% Configuración de la página
+\date{}
+\author{}
+
+\tableofcontents
+
+
+
+
+\tableofcontents
+
+\section{Introducción}
+Breve contexto del problema planteado y objetivos del análisis.
+
+\section{Metodología}
+\subsection{Planteo del Problema}
+Definición de hipótesis nula y alternativa.
+\subsection{Simulación de Datos en R}
+Explicación del uso de R para generar la muestra aleatoria.
+\subsection{Prueba de Hipótesis}
+Justificación del enfoque estadístico y descripción de los pasos realizados.
+
+\section{Desarrollo}
+\subsection{Tabla de Valores Simulados}
+Presentación de los datos generados.
+\subsection{Planteo de Hipótesis}
+Definición formal de \( H_0 \) y \( H_a \).
+\subsection{Cálculo del Estadístico de Prueba}
+Fórmula utilizada y valor calculado.
+\subsection{Determinación de la Región de Rechazo}
+Cálculo del valor crítico y comparación con el estadístico.
+\subsection{Decisión y Conclusión}
+Discusión de los resultados y decisión respecto a \( H_0 \).
+
+\section{Resultados}
+Interpretación final de los resultados obtenidos y validación de la afirmación del fabricante.
+
+\section{Referencias}
+\printbibliography
+
+\end{document}
