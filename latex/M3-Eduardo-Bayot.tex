@@ -166,7 +166,37 @@ En términos gráficos, la región de rechazo corresponde a los valores del esta
 
 
 \subsection{Cálculo del Estadístico de Prueba}
-Fórmula utilizada y valor calculado.
+
+El estadístico de prueba utilizado para evaluar la hipótesis nula es \( Z \), que mide la distancia entre el promedio muestral (\( \overline{X} \)) y la media poblacional bajo la hipótesis nula (\( \mu_0 \)), en unidades de error estándar. La fórmula utilizada es:
+
+\[
+Z = \frac{\overline{X} - \mu_0}{\sigma / \sqrt{n}}
+\]
+
+Donde:
+\begin{itemize}
+    \item \( \overline{X} \): promedio muestral, calculado a partir de los datos simulados.
+    \item \( \mu_0 \): media poblacional bajo la hipótesis nula.
+    \item \( \sigma \): desviación estándar conocida de la población.
+    \item \( n \): tamaño de la muestra.
+\end{itemize}
+
+Utilizando los valores obtenidos:
+\begin{itemize}
+    \item \( \overline{X} = 130.7743 \) (promedio muestral calculado).
+    \item \( \mu_0 = 130 \).
+    \item \( \sigma = 4 \).
+    \item \( n = 5 \).
+\end{itemize}
+
+El estadístico \( Z \) se calcula como:
+
+\[
+Z = \frac{130.7743 - 130}{4 / \sqrt{5}} = 0.4328
+\]
+
+El valor de \( Z = 0.4328 \) indica que la distancia entre el promedio muestral y la media hipotética es de aproximadamente 0.43 desviaciones estándar. Este valor será comparado con los valores críticos de la región de rechazo en la siguiente sección.
+
 \subsection{Determinación de la Región de Rechazo}
 Cálculo del valor crítico y comparación con el estadístico.
 \subsection{Decisión y Conclusión}
