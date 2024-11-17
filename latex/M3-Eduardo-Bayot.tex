@@ -145,7 +145,26 @@ Los valores obtenidos se presentan en la Tabla \ref{tab:valores_simulados}.
 \end{table}
 
 \subsection{Planteo de Hipótesis}
-Definición formal de \( H_0 \) y \( H_a \).
+
+El análisis estadístico se centra en evaluar la afirmación del fabricante de que la temperatura promedio de activación de los sistemas de rociadores es de \( \mu = 130 \) grados Fahrenheit. Para ello, se establece un planteo formal de hipótesis, como se describe a continuación:
+
+\begin{itemize}
+    \item \textbf{Hipótesis Nula (\( H_0 \))}: \( \mu = 130 \), donde \( \mu \) es la temperatura promedio de activación.
+    \item \textbf{Hipótesis Alternativa (\( H_a \))}: \( \mu \neq 130 \), lo que indica que la temperatura promedio de activación es diferente de 130 grados Fahrenheit.
+\end{itemize}
+
+La prueba de hipótesis se realiza con un nivel de significancia de \( \alpha = 0.01 \), utilizando un enfoque bilateral. Esto significa que cualquier desviación significativa de la media, ya sea hacia valores mayores o menores, puede llevar al rechazo de la hipótesis nula.
+
+En términos gráficos, la región de rechazo corresponde a los valores del estadístico \( Z \) que caen en las colas de la distribución normal estándar, delimitadas por los valores críticos \( Z_{\alpha/2} \) y \( -Z_{\alpha/2} \). Según Quevedo et al. (2009), la correcta formulación de las hipótesis y la identificación de la región de rechazo son pasos fundamentales para minimizar errores y garantizar resultados confiables \cite{quevedo2009}.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{region_rechazo.png}
+\caption{Distribución normal estándar con regiones de rechazo sombreadas. Los valores críticos delimitan las áreas donde se rechaza la hipótesis nula a un nivel de significancia de \( \alpha = 0.01 \).}
+\label{fig:region_rechazo}
+\end{figure}
+
+
 \subsection{Cálculo del Estadístico de Prueba}
 Fórmula utilizada y valor calculado.
 \subsection{Determinación de la Región de Rechazo}
