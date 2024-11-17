@@ -221,10 +221,34 @@ El valor del estadístico de prueba calculado en la subsección anterior es \( Z
 
 
 \subsection{Decisión y Conclusión}
-Discusión de los resultados y decisión respecto a \( H_0 \).
+
+Con base en los resultados obtenidos, se procede a evaluar si el valor del estadístico de prueba \( Z \) se encuentra dentro de la región de rechazo previamente definida.
+
+\begin{itemize}
+    \item El valor calculado del estadístico es \( Z = 0.4328 \).
+    \item La región de rechazo corresponde a \( Z < -2.576 \) o \( Z > 2.576 \), para un nivel de significancia \( \alpha = 0.01 \) en una prueba bilateral.
+\end{itemize}
+
+Dado que \( Z = 0.4328 \) no se encuentra en la región de rechazo, no se puede rechazar la hipótesis nula \( H_0 \). Esto indica que, al nivel de significancia seleccionado, los datos muestrales no proporcionan evidencia suficiente para afirmar que la temperatura promedio de activación difiere de \( 130 \) grados Fahrenheit.
+
+\textbf{Conclusión:} Los resultados sugieren que la afirmación del fabricante acerca de la temperatura promedio de activación de los rociadores es consistente con los datos generados bajo las condiciones del análisis. Por lo tanto, no hay razones estadísticas para dudar de su validez al nivel de significancia considerado.
+
 
 \section{Resultados}
-Interpretación final de los resultados obtenidos y validación de la afirmación del fabricante.
+
+El análisis realizado permitió evaluar la afirmación del fabricante sobre la temperatura promedio de activación de los sistemas de rociadores, con los siguientes resultados:
+
+\begin{itemize}
+    \item Se generó una muestra aleatoria de tamaño \( n = 5 \), utilizando una distribución normal con media \( \mu = 130 \) y desviación estándar \( \sigma = 4 \), basada en parámetros calculados a partir del DNI del estudiante.
+    \item El promedio muestral calculado fue \( \overline{X} = 130.7743 \), y el estadístico de prueba resultante fue \( Z = 0.4328 \).
+    \item La región de rechazo se determinó como \( Z < -2.576 \) o \( Z > 2.576 \), correspondiente a un nivel de significancia \( \alpha = 0.01 \) para una prueba bilateral.
+    \item Dado que el valor del estadístico \( Z \) no se encuentra dentro de la región de rechazo, no se puede rechazar la hipótesis nula \( H_0 \).
+\end{itemize}
+
+\textbf{Conclusión General:} Los datos simulados no proporcionan evidencia estadística suficiente para contradecir la afirmación del fabricante. Esto implica que la temperatura promedio de activación de los sistemas de rociadores puede considerarse, dentro de los límites del análisis, consistente con el valor declarado de \( \mu = 130 \) grados Fahrenheit.
+
+En el contexto del análisis estadístico, estos resultados resaltan la importancia de formular hipótesis claras, definir adecuadamente las regiones de rechazo y utilizar herramientas computacionales como R para llevar a cabo simulaciones y cálculos complejos de manera eficiente.
+
 
 \section{Referencias}
 
@@ -236,5 +260,15 @@ Las fuentes utilizadas en el presente trabajo son las siguientes:
 \end{itemize}
 
 \printbibliography
+
+\appendix
+\section{Repositorio del Código Fuente}
+
+El código fuente desarrollado para este trabajo, que incluye los scripts en R utilizados para la generación de datos y análisis, así como el archivo LaTeX del documento, está disponible públicamente en el siguiente repositorio de GitHub:
+
+\noindent\href{https://github.com/eduardo-bayot/s21-estadistica-tp3}{\texttt{https://github.com/eduardo-bayot/s21-estadistica-tp3}}
+
+Este repositorio proporciona una referencia reproducible para todos los cálculos y la documentación técnica incluidos en el trabajo.
+
 
 \end{document}
