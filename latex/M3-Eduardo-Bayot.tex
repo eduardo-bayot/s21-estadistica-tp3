@@ -198,7 +198,28 @@ Z = \frac{130.7743 - 130}{4 / \sqrt{5}} = 0.4328
 El valor de \( Z = 0.4328 \) indica que la distancia entre el promedio muestral y la media hipotética es de aproximadamente 0.43 desviaciones estándar. Este valor será comparado con los valores críticos de la región de rechazo en la siguiente sección.
 
 \subsection{Determinación de la Región de Rechazo}
-Cálculo del valor crítico y comparación con el estadístico.
+
+La región de rechazo se establece a partir de los valores críticos de la distribución normal estándar para un nivel de significancia \( \alpha = 0.01 \). En una prueba bilateral, la región de rechazo se encuentra en ambas colas de la distribución, delimitadas por los valores \( Z_{\alpha/2} \) y \( -Z_{\alpha/2} \).
+
+Los valores críticos para \( \alpha = 0.01 \) son calculados como:
+
+\[
+Z_{\alpha/2} = Z_{0.005} = 2.576, \quad -Z_{\alpha/2} = -2.576
+\]
+
+Esto implica que cualquier valor de \( Z \) que sea mayor que \( 2.576 \) o menor que \( -2.576 \) cae en la región de rechazo. De lo contrario, no se rechaza la hipótesis nula.
+
+En términos gráficos, estas regiones corresponden a las áreas sombreadas en rojo en la Figura \ref{fig:region_rechazo}, previamente presentada.
+
+El valor del estadístico de prueba calculado en la subsección anterior es \( Z = 0.4328 \), que no se encuentra dentro de la región de rechazo. Esto sugiere que, al nivel de significancia seleccionado, no hay evidencia suficiente para rechazar la hipótesis nula.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{posicion_Z.png}
+\caption{Distribución normal estándar con regiones de rechazo sombreadas. El estadístico de prueba \( Z = 0.4328 \) se encuentra fuera de la región de rechazo.}
+\label{fig:posicion_Z}
+\end{figure}
+
+
 \subsection{Decisión y Conclusión}
 Discusión de los resultados y decisión respecto a \( H_0 \).
 
