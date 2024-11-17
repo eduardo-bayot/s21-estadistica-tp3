@@ -49,15 +49,52 @@
 \tableofcontents
 
 \section{Introducción}
-Breve contexto del problema planteado y objetivos del análisis.
+
+En este trabajo práctico se analiza una situación estadística relacionada con la validación de afirmaciones realizadas por un fabricante sobre la temperatura de activación de un sistema de rociadores contra incendios. Según el fabricante, la temperatura promedio de activación es de 130°F. Este análisis tiene como objetivo verificar dicha afirmación mediante una prueba de hipótesis estadística.
+
+Se utiliza la metodología planteada en el módulo de Probabilidad y Estadística, empleando simulaciones generadas en el software R para replicar una muestra de datos basada en una distribución normal con parámetros específicos. La validación se realizará evaluando si los datos obtenidos contradicen la hipótesis nula planteada a un nivel de significancia del 1\%.
+
+La introducción al análisis se fundamenta en los conceptos de pruebas de hipótesis, regiones de rechazo y estadísticos de prueba. Este trabajo busca responder a la pregunta de si los datos muestrales proporcionan evidencia suficiente para rechazar la afirmación del fabricante o si no existen razones suficientes para contradecirla. Finalmente, los resultados serán interpretados para concluir si la hipótesis del fabricante es consistente con los datos simulados.
+
 
 \section{Metodología}
+
+El desarrollo de este trabajo se estructura en tres etapas principales: planteo del problema, simulación de datos y aplicación de una prueba de hipótesis para evaluar la validez de la afirmación del fabricante. A continuación, se describe cada una de estas etapas.
+
 \subsection{Planteo del Problema}
-Definición de hipótesis nula y alternativa.
+El problema planteado consiste en validar la afirmación del fabricante de que la temperatura promedio de activación de los sistemas de rociadores es de 130°F. Para ello, se define la hipótesis nula (\(H_0\)) y la hipótesis alternativa (\(H_a\)):
+
+\begin{itemize}
+    \item \(H_0: \mu = 130\), donde \(\mu\) es la temperatura promedio de activación.
+    \item \(H_a: \mu \neq 130\), lo que indica que la temperatura promedio de activación difiere de 130°F.
+\end{itemize}
+
+Esta prueba se llevará a cabo con un nivel de significancia de \( \alpha = 0.01 \), utilizando un enfoque bilateral dado que la hipótesis alternativa no especifica una dirección particular en el cambio.
+
 \subsection{Simulación de Datos en R}
-Explicación del uso de R para generar la muestra aleatoria.
+Los datos muestrales serán generados utilizando el software R. Según lo especificado en la consigna, la muestra se obtiene utilizando la función \texttt{rnorm}, que genera valores aleatorios de una distribución normal con media \(\mu = 130\) y desviación estándar \(\sigma = c\), donde \(c\) es el tercer dígito no nulo del DNI. El tamaño de la muestra (\(n\)) es determinado por la suma de los dos primeros dígitos no nulos del DNI.
+
+La generación de datos mediante simulaciones permite replicar el comportamiento de un experimento real de forma controlada. Según Quevedo et al. (2009), las simulaciones son una herramienta poderosa para comprender la variabilidad inherente a los datos y evaluar hipótesis estadísticas bajo diferentes supuestos \cite{quevedo2009}.
+
 \subsection{Prueba de Hipótesis}
-Justificación del enfoque estadístico y descripción de los pasos realizados.
+Para evaluar la afirmación del fabricante, se utiliza una prueba de hipótesis para la media de una población con desviación estándar conocida, basada en el estadístico \(Z\):
+
+\[
+Z = \frac{\overline{X} - \mu_0}{\sigma / \sqrt{n}}
+\]
+
+Donde:
+\begin{itemize}
+    \item \(\overline{X}\) es el promedio muestral.
+    \item \(\mu_0\) es el valor bajo la hipótesis nula (130°F).
+    \item \(\sigma\) es la desviación estándar de la población (valor \(c\)).
+    \item \(n\) es el tamaño de la muestra.
+\end{itemize}
+
+La región de rechazo será determinada según los valores críticos de \(Z\) para un nivel de significancia del 1\% en una prueba bilateral. De acuerdo con Quevedo et al. (2009), la correcta definición de estas regiones es crucial para minimizar errores de tipo I y II, asegurando decisiones fundamentadas estadísticamente \cite{quevedo2009}.
+
+
+
 
 \section{Desarrollo}
 \subsection{Tabla de Valores Simulados}
@@ -75,6 +112,14 @@ Discusión de los resultados y decisión respecto a \( H_0 \).
 Interpretación final de los resultados obtenidos y validación de la afirmación del fabricante.
 
 \section{Referencias}
+
+Las fuentes utilizadas en el presente trabajo son las siguientes:
+
+\begin{itemize}
+    \item Quevedo Urias, H., \& Pérez Salvador, B. R. (2009). \textit{Estadística para Ingeniería y Ciencias}. Editorial Patria.
+    \item R Core Team. (2023). \textit{The R Project for Statistical Computing}. Recuperado de \url{https://www.r-project.org/}.
+\end{itemize}
+
 \printbibliography
 
 \end{document}
